@@ -132,6 +132,14 @@
     .w-backCircle{
       left: 8rem!important;
     }
+    .rep-intro{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
   
   }
+
+  
   

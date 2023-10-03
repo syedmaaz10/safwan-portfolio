@@ -12,6 +12,9 @@
   flex-direction: column;
   gap: 2rem;
 }
+.rep-intro{
+  display: flex;
+}
 .i-name {
   display: flex;
   flex-direction: column;
@@ -99,6 +102,21 @@
     gap: 7rem;
     height: 64rem;
   }
+  
+
+  .rep-intro{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+  }
+  .i-button {
+    width: 6rem;
+    height: 2rem;
+    
+    
+  }
+
 
   .i-right {
     transform: scale(0.8);

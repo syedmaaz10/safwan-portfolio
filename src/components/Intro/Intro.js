@@ -26,7 +26,7 @@ const Intro = () => {
     <div className="Intro" id="Intro">
       {/* left name side */}
       <div className="i-left">
-        <div className="i-name">
+        <div className="i-name rep-intro">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
           <span>Safwan</span>
@@ -35,7 +35,7 @@ const Intro = () => {
          I am a passionate web and app developer, dedicated to creating immersive online experiences that captivate and engage.
           </span>
         </div>
-        <Link to="contact" smooth={true} spy={true}>
+        <Link to="contact" smooth={true} spy={true} className="rep-intro" >
           <button className="button i-button">Hire me</button>
         </Link>
         {/* social icons */}

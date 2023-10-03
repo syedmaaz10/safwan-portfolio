@@ -6,6 +6,7 @@ import Glasses from "../../img/glasses.png";
 // import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
+import Experience from "../Experience/Experience";
 // import Resume from './resume.pdf';
 
 const Services = () => {
@@ -22,11 +23,11 @@ const Services = () => {
   return (
     <div className="services" id="services">
       {/* left side */}
-      <div className="awesome">
+      <div className="awesome rep-intro">
         {/* dark mode */}
         <span style={{ color: darkMode ? "white" : "" }}>My Awesome</span>
         <span>services</span>
-        <h2>
+        <h2 >
         Crafting digital experiences that seamlessly blend creativity and functionality, 
 
           <br />
@@ -80,6 +81,7 @@ const Services = () => {
             color="rgba(252, 166, 31, 0.45)"
           /> */}
         </motion.div>
+        <Experience />
         <div
           className="blur s-blur2"
           style={{ background: "var(--purple)" }}

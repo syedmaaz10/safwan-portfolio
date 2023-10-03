@@ -1,0 +1,95 @@
+.contact-form{
+  padding: 0 3rem 0 3rem;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  margin-top: 4rem;
+    /* scroll */
+padding-top: 3rem;
+display: flex;
+justify-content: space-around;
+align-items: center;
+
+}
+.heading{
+ 
+  font-size: 30px !important;
+}
+.contact-details{
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  width: 1200px;
+  justify-content: space-around;
+}
+.i-icons {
+ flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+ 
+}
+
+
+.cont-sub-div{  display: flex;
+
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.i-icons > * {
+  transform: scale(0.5);
+}
+.i-icons > *:hover {
+  cursor: pointer;
+}
+.c-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+
+}
+
+.c-right>form
+{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  
+}
+
+.c-right .user{
+  width: 20rem;
+  height: 2rem;
+  padding: 0.3em;
+  outline: none;
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  font-size: 16px;   
+}
+
+textarea{
+  height: 4rem!important;
+}
+
+.c-blur1{
+  top: 1rem;
+  left: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+  .contact-form{
+      padding: 0;
+      flex-direction: column;
+      gap: 5rem;
+      height: 40rem;
+  }
+  .c-right .user{
+      width: 16rem;
+  }
+
+}   

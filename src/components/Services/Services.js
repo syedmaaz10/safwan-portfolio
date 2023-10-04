@@ -43,22 +43,9 @@ const Services = () => {
       {/* right */}
       <div className="cards">
         {/* first card */}
+        <div className="left-motion">
         <motion.div
-          initial={{ left: "25rem" }}
-          whileInView={{ left: "14rem" }}
-          transition={transition}
-        >
-          <Card
-            emoji={HeartEmoji}
-            // heading={"Design"}
-            // detail={"Figma, Sketch, Photoshop, Adobe Illustrator, Adobe xd"}
-          />
-        </motion.div>
-        {/* second card */}
-        <motion.div
-          initial={{ left: "-11rem", top: "12rem" }}
-          whileInView={{ left: "-4rem" }}
-          transition={transition}
+        
         >
           <Card
             emoji={Glasses}
@@ -72,16 +59,12 @@ const Services = () => {
           whileInView={{ left: "12rem" }}
           transition={transition}
         >
-          {/* <Card
-            emoji={Humble}
-            heading={"UI/UX"}
-            // detail={
-            //   ""
-            // }
-            color="rgba(252, 166, 31, 0.45)"
-          /> */}
         </motion.div>
+        </div>
+        <div className="exp-div">
         <Experience />
+        </div>
+        
         <div
           className="blur s-blur2"
           style={{ background: "var(--purple)" }}

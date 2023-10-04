@@ -65,5 +65,23 @@ h1.service__text {
       max-width: 300px;
       margin-left: auto;
       margin-right: auto;
+      text-align: center;
+    }
+    .exp-div{
+        margin-top: 400px;
+        height: 250px !important;
+    }
+    .left-motion{
+        border: 2px solid transparent;
+       margin-left: auto;
+       margin-right: auto;
+       width: 300px;
+       display: flex;
+       justify-content: center;
+    }
+    .flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }

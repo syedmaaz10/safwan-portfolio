@@ -1,51 +1,86 @@
 .n-wrapper {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    top: 0;
-  }
-  .n-left {
-    flex: 1;
-    align-items: center;
-    justify-content: left;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .n-name {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  .n-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 400;
-  }
-  
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  top: 0;
+}
+
+.n-left {
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+}
+
+.n-list {
+  flex: 10;
+}
+
+.n-list > ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list > ul :hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.n-button {
+  flex: 2;
+}
+
+/* Hide mobile menu by default */
+@media screen and (max-width: 480px) {
   .n-list {
-    flex: 10;
+    display: none;
   }
-  .n-list > ul {
-    display: flex;
-    gap: 2rem;
-    margin-right: 4rem;
+  /* Show mobile menu when the show-menu class is applied */
+  .show-menu .n-list {
+    display: block;
   }
-  
-  .n-list > ul :hover {
-    color: var(--orange);
-    cursor: pointer;
-  }
-  
-  .n-button {
-    flex: 2;
-  }
-  
-  @media screen and (max-width: 480px) {
-    .n-list {
-      display: none;
-    }
-  }
-  
+}
+
+
+
+/* ... Existing styles ... */
+
+/* Dropdown button */
+.dropdown-button {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Show the dropdown content when it's open */
+.show-dropdown .dropdown-content {
+  display: block;
+}

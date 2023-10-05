@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Toggle from "../Toggle/Toggle";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="n-wrapper" id="Navbar">
       {/* left */}
@@ -12,7 +21,12 @@ const navbar = () => {
       </div>
       {/* right */}
       <div className="n-right">
-        <div className="n-list">
+        {/* Menu icon for mobile */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </div>
+        {/* Menu for desktop */}
+        <div className={`n-list ${isMenuOpen ? "show-menu" : ""}`}>
           <ul style={{ listStyleType: "none" }}>
             <li>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
@@ -21,7 +35,7 @@ const navbar = () => {
             </li>
             <li>
               <Link to="services" spy={true} smooth={true}>
-                Serivces
+                Services
               </Link>
             </li>
             <li>
@@ -42,11 +56,14 @@ const navbar = () => {
           </ul>
         </div>
         <Link to="contact" spy={true} smooth={true}>
-        <button className="button n-button">Contact</button>
+          <button className="button n-button">Contact</button>
         </Link>
+        <div style={{display:`${isMenuOpen?"block" : "none"}`}}>
+          maaz
+        </div>
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;

@@ -55,6 +55,15 @@
   .show-menu .n-list {
     display: block;
   }
+  .n-wrapper {
+    padding-top: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    top: 0;
+  }
 }
 
 

@@ -1,32 +1,21 @@
-import React, { useState } from "react";
-import Toggle from "../Toggle/Toggle";
-import "./Navbar.css";
+import React from 'react';
+import './Dropdown.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-scroll";
-
-import MyDropdown from "./Dropdown/MyDropdown";
-
-const Navbar = () => {
+import { useState } from 'react';
+function MyDropdown(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
-    <div className="n-wrapper" id="Navbar">
-      {/* left */}
-      <div className="n-left">
-        <div className="n-name">Safwan</div>
-        <Toggle />
-      </div>
-      
-      {/* right */}
-      <div className="n-right">
-        {/* Menu icon for mobile */}
-        
-        {/* Menu for desktop */}
-        <div className={`n-list ${isMenuOpen ? "show-menu" : ""}`}>
-          <ul style={{ listStyleType: "none" }}>
+    <div className='main-div'> 
+      <div className="menu-icon" onClick={toggleMenu}>
+          <FontAwesomeIcon icon={isMenuOpen ? faTimes : faBars} />
+        </div>
+      <ul className={`ul ${isMenuOpen ? 'show-menu' : ''}`} >
             <li>
               <Link activeClass="active" to="Navbar" spy={true} smooth={true}>
                 Home
@@ -53,15 +42,8 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <Link to="contact" spy={true} smooth={true}>
-          <button className="button n-button">Contact</button>
-        </Link>
-        <MyDropdown></MyDropdown> 
-        
-      </div>
     </div>
   );
-};
+}
 
-export default Navbar;
+export default MyDropdown;

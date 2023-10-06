@@ -1,0 +1,47 @@
+.ul {
+    list-style-type: none;
+    width: 90%;
+    border-radius: 30px;
+    padding: 10px;
+    cursor: pointer;
+    
+    align-items: center;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    opacity: 0; /* Start with opacity set to 0 */
+    visibility: hidden; /* Start with visibility hidden */
+    transition: opacity 1s ease, visibility 1s ease; /* Add transition properties */
+  }
+  
+  .menu-icon {
+    margin-top: 2px;
+    margin-left: 20px;
+  }
+  
+  .ul > li {
+   
+    margin-top: 5px;
+    font-size: smaller;
+  }
+  
+  .main-div {
+    display: block;
+  }
+  
+  /* Show the dropdown when isMenuOpen is true */
+  .ul.show-menu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media screen and (min-width: 480px) {
+    .main-div{
+        display: none;
+        
+    }
+  }
+  

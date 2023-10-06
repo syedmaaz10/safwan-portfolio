@@ -89,6 +89,10 @@ textarea{
       gap: 5rem;
       height: 40rem;
   }
+  .heading{
+ 
+    font-size: 20px !important;
+  }
   .c-right .user{
       width: 16rem;
   }
